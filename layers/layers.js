@@ -15,29 +15,31 @@ var lyr_STOrtofotocolor2020_0 = new ol.layer.Tile({
                             
                           });
               wms_layers.push([lyr_STOrtofotocolor2020_0, 0]);
-var format_positiusriudellots_1 = new ol.format.GeoJSON();
-var features_positiusriudellots_1 = format_positiusriudellots_1.readFeatures(json_positiusriudellots_1, 
+var format_PositiusRiudellots10052024_1 = new ol.format.GeoJSON();
+var features_PositiusRiudellots10052024_1 = format_PositiusRiudellots10052024_1.readFeatures(json_PositiusRiudellots10052024_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_positiusriudellots_1 = new ol.source.Vector({
+var jsonSource_PositiusRiudellots10052024_1 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_positiusriudellots_1.addFeatures(features_positiusriudellots_1);
-var lyr_positiusriudellots_1 = new ol.layer.Vector({
-                declutter: true,
-                source:jsonSource_positiusriudellots_1, 
-                style: style_positiusriudellots_1,
+jsonSource_PositiusRiudellots10052024_1.addFeatures(features_PositiusRiudellots10052024_1);
+var lyr_PositiusRiudellots10052024_1 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_PositiusRiudellots10052024_1, 
+                style: style_PositiusRiudellots10052024_1,
+                popuplayertitle: "Positius Riudellots 10052024",
                 interactive: true,
-                title: '<img src="styles/legend/positiusriudellots_1.png" /> positius riudellots'
+                title: '<img src="styles/legend/PositiusRiudellots10052024_1.png" /> Positius Riudellots 10052024'
             });
 var group_Mapasdefondo = new ol.layer.Group({
                                 layers: [lyr_STOrtofotocolor2020_0,],
+                                fold: "open",
                                 title: "Mapas de fondo"});
 
-lyr_STOrtofotocolor2020_0.setVisible(true);lyr_positiusriudellots_1.setVisible(true);
-var layersList = [group_Mapasdefondo,lyr_positiusriudellots_1];
-lyr_positiusriudellots_1.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'àrea': 'àrea', 'layer': 'layer', 'path': 'path', });
-lyr_positiusriudellots_1.set('fieldImages', {'fid': 'Range', 'id': 'Range', 'àrea': 'Range', 'layer': 'TextEdit', 'path': 'TextEdit', });
-lyr_positiusriudellots_1.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'àrea': 'no label', 'layer': 'no label', 'path': 'no label', });
-lyr_positiusriudellots_1.on('precompose', function(evt) {
+lyr_STOrtofotocolor2020_0.setVisible(true);lyr_PositiusRiudellots10052024_1.setVisible(true);
+var layersList = [group_Mapasdefondo,lyr_PositiusRiudellots10052024_1];
+lyr_PositiusRiudellots10052024_1.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'àrea': 'àrea', 'layer': 'layer', 'path': 'path', });
+lyr_PositiusRiudellots10052024_1.set('fieldImages', {'fid': 'Range', 'id': 'Range', 'àrea': 'Range', 'layer': 'TextEdit', 'path': 'TextEdit', });
+lyr_PositiusRiudellots10052024_1.set('fieldLabels', {'fid': 'inline label - always visible', 'id': 'inline label - always visible', 'àrea': 'inline label - always visible', 'layer': 'hidden field', 'path': 'hidden field', });
+lyr_PositiusRiudellots10052024_1.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
